@@ -161,27 +161,24 @@
 												style="width: 45%" />
 											</td>
 										</tr>
-										
+										<tr>
+											<th><label for="board_mobile${_prefix}"
+												class="table_tit">연락처</label>
+											</th>
+											<td colspan="2" style="text-align: left;"><input
+												type="text" name="board_mobile${_prefix}"
+												id="board_mobile${_prefix}" class="easyui-validatebox"
+												style="width: 45%" />
+											</td>
+										</tr>
 										<%-- 상담 영역 노출  begin --%>
-										<c:if
-											test="${boardOptionList[0].tcd_code eq 'BD11'}">
-											<tr>
-												<th><label for="board_mobile${_prefix}"
-													class="table_tit">연락처</label>
-												</th>
-												<td colspan="2" style="text-align: left;"><input
-													type="text" name="board_mobile${_prefix}"
-													id="board_mobile${_prefix}" class="easyui-validatebox"
-													style="width: 45%" />
-												</td>
-											</tr>
+										<c:if test="${boardOptionList[0].tcd_code eq 'BD11'}">
 											<tr>
 												<th><label class="table_tit">유입경로</label></th>
 												<td colspan="2" style="text-align: left;">
 													<textarea name="utm_path${_prefix}" class="utm_path${_prefix}" style="width:100%;height:50px"></textarea> 
 												</td>
 											</tr>
-
 											<c:if test="${boardOptionList[0].tcd_code eq 'BD08'}">
 												<tr>
 													<th><label for="board_secret${_prefix}"
