@@ -679,9 +679,11 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$(".btn_download").on("click", function() {
-				var filePath = "/NAS/_grand/common/"+$(this).data("opt");
-				var fileName = $(this).data("opt");
-				location.href="/community/fileDownload?filePath="+filePath+"&fileName="+fileName;
+				// var filePath = "/NAS/_grand/common/"+$(this).data("opt");
+				// var fileName = $(this).data("opt");
+				// 해당 컨트롤러 애초에 존재하지 않음 -> /community/fileDownload
+				// location.href="/community/fileDownload?filePath="+filePath+"&fileName="+fileName;
+				location.href = "/imgpath/_grand/common/"+$(this).data("opt");
 			});
 		});
 	</script>
