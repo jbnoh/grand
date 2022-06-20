@@ -363,18 +363,12 @@
 																</div>
 																<span class="img_txt" id="target01${_prefix}_text">썸네일</span>
 															</li>
-															<%-- 여기 작업중... 하나 더 생성해서
-																$("#saveBtn${_prefix}").on("click", function(){
-																
-																이구간에서 2번 가져오도록 처리
-															
-															 --%>
 															<li style="width:34%;">
 																<a href="#" class="easyui-linkbutton imgdel" data-options="plain:true,iconCls:'icon-cancel'" style="width:50px;display:none;position: absolute;left: 90%;z-index:1"></a>
-																<div class="easyui-droppable targetarea targetDropBox img${_prefix}" id="target01${_prefix}" data-index="0">
+																<div class="easyui-droppable targetarea targetDropBox img${_prefix}" id="target02${_prefix}" data-index="0">
 																	<img src="/admin/img/img_sample.jpg" alt="1">
 																</div>
-																<span class="img_txt" id="target01${_prefix}_text">썸네일</span>
+																<span class="img_txt" id="target02${_prefix}_text">썸네일</span>
 															</li>
 														</ul>
 													</div>
@@ -530,7 +524,6 @@
 			}
 			,
 			onDrop: function(e,source){
-				debugger;
 				var title = $(source).data("title");
 				var filekey = $(source).data("filekey");
 				var filepath = $(source).data("imgsrc");
@@ -1271,8 +1264,6 @@
 	   			
    			$("#saveBtn${_prefix}").off("click");
 			$("#saveBtn${_prefix}").on("click", function(){
-				debugger;
-				
 				var sHTML;
 				var rHTML;
 				var mHTML;
@@ -1484,27 +1475,24 @@
    					
    				}
    				
-   				
-   				/* var img0 = null;
-   				var img1 = null;
-   				var img2 = null;
-   				var img3 = null;
-   				img0 = $(".img${_prefix}:eq(0)").find("img").attr("src");
+   				var img0 = $(".img${_prefix}:eq(0)").find("img").attr("src");
    				if( img0.indexOf("img_sample.jpg") > -1 ) {
    					img0 = "";
    				}
-   				img1 = $(".img${_prefix}:eq(1)").find("img").attr("src");
+   				var img1 = $(".img${_prefix}:eq(1)").find("img").attr("src");
    				if( img1.indexOf("img_sample.jpg") > -1 ) {
    					img1 = "";
    				}
-   				img2 = $(".img${_prefix}:eq(2)").find("img").attr("src");
+   				/*
+   				var img2 = $(".img${_prefix}:eq(2)").find("img").attr("src");
    				if( img2.indexOf("img_sample.jpg") > -1 ) {
    					img2 = "";
    				}
-   				img3 = $(".img${_prefix}:eq(3)").find("img").attr("src");
+   				var img3 = $(".img${_prefix}:eq(3)").find("img").attr("src");
    				if( img3.indexOf("img_sample.jpg") > -1 ) {
    					img3 = "";
-   				} */
+   				}
+   				*/
    				
 		    	var param = {};
 		    	param.Board_idx = $index;
@@ -1523,8 +1511,9 @@
 				param.tcd_attr3 = "<c:out value="${boardOptionList[0].tcd_attr3}" default="Korea" escapeXml="true"/>"
 				param.file_name_arr = file_name_arr;
 				param.file_original_arr = file_original_arr;
-				//param.save_file = img0 +"|"+  img1 +"|"+ img2 +"|"+ img3; 
-				param.save_file = $(".img${_prefix}:eq(0)").find("img").attr("src"); //$("#save_file${_prefix}").val();
+				param.save_file = img0 +"|"+ img1;
+				// param.save_file = img0 +"|"+  img1 +"|"+ img2 +"|"+ img3;
+				// param.save_file = $(".img${_prefix}:eq(0)").find("img").attr("src"); //$("#save_file${_prefix}").val();
 				param.board_mobile = $("#board_mobile${_prefix}").val();
 				param.board_cnt = $("#board_cnt${_prefix}").val();
 				param.board_url = $("#board_url${_prefix}").val();
@@ -1537,7 +1526,7 @@
 				param.board_etc7 = $("#board_etc7${_prefix}").val();
 				param.board_etc8 = $("#board_etc8${_prefix}").val();
 				param.board_reply = rHTML;
-				//param.board_etc9 = $("#target01 >img").attr("src")+"|"+$("#target02 >img").attr("src");
+				param.board_etc9 = $("#target01 >img").attr("src")+"|"+$("#target02 >img").attr("src");
 				param.board_reg_name = $("#board_reg_name${_prefix}").val();
 				param.board_memory = mHTML;
 				param.board_reg_date = board_reg_date;
