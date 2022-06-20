@@ -363,6 +363,19 @@
 																</div>
 																<span class="img_txt" id="target01${_prefix}_text">썸네일</span>
 															</li>
+															<%-- 여기 작업중... 하나 더 생성해서
+																$("#saveBtn${_prefix}").on("click", function(){
+																
+																이구간에서 2번 가져오도록 처리
+															
+															 --%>
+															<li style="width:34%;">
+																<a href="#" class="easyui-linkbutton imgdel" data-options="plain:true,iconCls:'icon-cancel'" style="width:50px;display:none;position: absolute;left: 90%;z-index:1"></a>
+																<div class="easyui-droppable targetarea targetDropBox img${_prefix}" id="target01${_prefix}" data-index="0">
+																	<img src="/admin/img/img_sample.jpg" alt="1">
+																</div>
+																<span class="img_txt" id="target01${_prefix}_text">썸네일</span>
+															</li>
 														</ul>
 													</div>
 												</td>
@@ -517,6 +530,7 @@
 			}
 			,
 			onDrop: function(e,source){
+				debugger;
 				var title = $(source).data("title");
 				var filekey = $(source).data("filekey");
 				var filepath = $(source).data("imgsrc");
@@ -1257,6 +1271,7 @@
 	   			
    			$("#saveBtn${_prefix}").off("click");
 			$("#saveBtn${_prefix}").on("click", function(){
+				debugger;
 				
 				var sHTML;
 				var rHTML;
