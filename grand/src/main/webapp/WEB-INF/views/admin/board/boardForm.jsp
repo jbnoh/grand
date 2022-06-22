@@ -1476,11 +1476,11 @@
    				}
    				
    				var img0 = $(".img${_prefix}:eq(0)").find("img").attr("src");
-   				if( img0.indexOf("img_sample.jpg") > -1 ) {
+   				if( ! img0 || img0.indexOf("img_sample.jpg") > -1 ) {
    					img0 = "";
    				}
    				var img1 = $(".img${_prefix}:eq(1)").find("img").attr("src");
-   				if( img1.indexOf("img_sample.jpg") > -1 ) {
+   				if( ! img1 || img1.indexOf("img_sample.jpg") > -1 ) {
    					img1 = "";
    				}
    				/*
@@ -1511,7 +1511,11 @@
 				param.tcd_attr3 = "<c:out value="${boardOptionList[0].tcd_attr3}" default="Korea" escapeXml="true"/>"
 				param.file_name_arr = file_name_arr;
 				param.file_original_arr = file_original_arr;
-				param.save_file = img0 +"|"+ img1;
+				var imgSave = img0;
+				if (img1) {
+					imgSave += "|" + img1;
+				}
+				param.save_file = imgSave;
 				// param.save_file = img0 +"|"+  img1 +"|"+ img2 +"|"+ img3;
 				// param.save_file = $(".img${_prefix}:eq(0)").find("img").attr("src"); //$("#save_file${_prefix}").val();
 				param.board_mobile = $("#board_mobile${_prefix}").val();
