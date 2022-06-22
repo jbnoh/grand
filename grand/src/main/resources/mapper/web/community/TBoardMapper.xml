@@ -112,7 +112,7 @@
 				</if>
 					
 				<include refid="whereBoardList" />
-				order by board_notice asc,board_reg_date asc,board_idx asc
+				order by board_reg_date asc,board_idx asc
 				
     		) tbl,
    			(SELECT @ROWNUM := 0) R
