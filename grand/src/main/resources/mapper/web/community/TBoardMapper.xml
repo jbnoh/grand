@@ -176,14 +176,7 @@
 					#{board_menu_code}
 				,	#{board_title}
 				,	#{board_reg_name}
-				<choose>
-					<when test="board_menu_code =='BD05'">
-					,	#{board_reg_date}
-					</when>
-					<otherwise>
-					,	now()
-					</otherwise>
-				</choose>
+				,	now()
 				,	SHA2( #{board_reg_pass},256 )
 				,	#{board_useyn}
 				,	#{board_mobile}

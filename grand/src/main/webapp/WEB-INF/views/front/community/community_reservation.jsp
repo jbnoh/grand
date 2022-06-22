@@ -289,7 +289,7 @@
 			prm.board_cate_L = "${category}";
 			prm.board_cate_M = category_M;
 			prm.board_etc1 = $("input[name='answer']:checked").val();
-			prm.board_etc2 = $(".time_box").find(".active .time").text();
+			prm.board_etc2 = datePickerFormat() + " " + $(".time_box").find(".active .time").text();
 			prm.board_etc3 = $("input[name='answer02']:checked").val();
 			prm.board_etc4 = $("#etc").val();
 
@@ -359,14 +359,7 @@
 					
 					datePicker();
 					
-					this.year = $(".ui-datepicker-year").text();
-					this.month = $(".ui-datepicker-month").text();
-					
-					if( this.month < 10 ){
-						this.month = "0"+this.month;
-					}
-					this.day = $(".ui-state-active").text();
-					prm.board_etc5 = this.year + "-" + this.month + "-" + this.day;
+					prm.board_etc5 = datePickerFormat();
 					
 					$.ajax({
 						url			: "/community/interface/communityList/BD05"
@@ -416,7 +409,13 @@
 			
 		});
 		
-		
+		function datePickerFormat() {
+			var month = $(".ui-datepicker-month").text();
+			if (month < 10) {
+				month = "0" + month;
+			}
+			return $(".ui-datepicker-year").text() + "-" + month + "-" + $(".ui-state-active").text();
+		}
 		
 		
 	</script>

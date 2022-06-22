@@ -572,7 +572,8 @@
 	AND
 		board_idx = #{board_idx}
 	</if>	
-	order by t.board_reg_date desc,board_idx desc		
+	-- order by t.board_reg_date desc,board_idx desc
+	order by board_idx desc
 	LIMIT #{startpage} , #{rows}
     </select>
     
