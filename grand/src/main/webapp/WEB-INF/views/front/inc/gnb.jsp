@@ -111,7 +111,7 @@
 								<li class="user_login"><a href="/user/interface/logout">로그아웃</a></li>
 							</c:otherwise>
 						</c:choose>
-						<li><a href="/home/nonbenefit">비급여 진료비 안내</a></li>
+						<li><a href="/nonbenefit">비급여 진료비 안내</a></li>
 					</ul>
 					
 				</div>
