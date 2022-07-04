@@ -37,12 +37,14 @@
 
 <script type="text/x-jquery-tmpl"  id="banner_swiper_list">
 	<div class="swiper-slide">
-		<div class="img-wrap pc_show">
-			<img src="{{html $item.replaceImg()}}" alt="메인 비주얼">
-		</div>
-		<div class="img-wrap mo_show">
-			<img src="{{html $item.replaceImg("mo")}}" alt="메인 비주얼">
-		</div>
+		<a href="javascript:movePage('\${board_url}');">
+			<div class="img-wrap pc_show">
+				<img src="{{html $item.replaceImg()}}" alt="메인 비주얼">
+			</div>
+			<div class="img-wrap mo_show">
+				<img src="{{html $item.replaceImg("mo")}}" alt="메인 비주얼">
+			</div>
+		</a>
 	</div>
 </script>
 
@@ -1132,6 +1134,11 @@ var $tempFnc = {
 		);	 
 	}		
 			
+	function movePage(link) {
+		if (link) {
+			window.open(link);
+		}
+	}
 
 
 </script>

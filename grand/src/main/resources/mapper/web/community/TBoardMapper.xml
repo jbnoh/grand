@@ -98,6 +98,7 @@
 					,tb.board_etc4
 					,tb.board_reply
 					,tb.save_file
+					,tb.board_url
 					<if test="board_menu_code =='BD04' or board_menu_code =='BD06' ">
 					,tcd.tcd_title as tcd_title
 					,tcds.tcd_title as tcds_title
