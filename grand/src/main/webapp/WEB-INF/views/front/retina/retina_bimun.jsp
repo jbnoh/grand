@@ -286,7 +286,7 @@
 							</li>
 						</ul>
 					</div>
-					<a href="/comunity/review" class="anchor-arrow">고객 체험기 바로가기</a>
+					<a href="/community/review" class="anchor-arrow">고객 체험기 바로가기</a>
 				</div>
 			</div>
 		</div>
