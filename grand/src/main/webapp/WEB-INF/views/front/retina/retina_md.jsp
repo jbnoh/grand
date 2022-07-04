@@ -206,20 +206,24 @@
 										</p>
 									</li>
 								</ul>
-								<a href="/retina/shottreat" class="anchor-arrow">안구 내 주사 치료 바로가기 </a>
 							</div>
+							<div class="link-wrap pc_show">
+								<a href="/retina/shottreat" class="anchor-arrow">안구 내 주사 치료 바로가기</a>
+							</div>
+							<ul class="link_box justify-cont-center flex mo_show">
+								<li><a href="/retina/shottreat" class="btn_detail">안구 내 주사 치료 바로가기</a></li>
+							</ul>
 						</div>
 					</div>
 				</div>
 				<div class="md05 txt-center">
-					<a href="/retina/shottreat" class="anchor-arrow mo_show">안구 내 주사 치료 바로가기 </a>
 					<h4 class="top-tit">강남그랜드안과</h4>
 					<h2 class="cont-tit">황반변성 클리닉 시스템</h2>
-					<p class="cont-desc mo_inr">
-						강남그랜드안과는 정밀 검사를 통해 <br class="mo_show">고객의 눈 상태를 확인합니다. <br>
-						검사 후 의료진과 일대일 맞춤 상담으로 <br class="mo_show">황반변셩 치료 방법을 결정합니다.
+					<p class="cont-desc">
+						강남그랜드안과는 정밀 검사를 통해 고객의 눈 상태를 확인합니다. <br>
+						검사 후 의료진과 일대일 맞춤 상담으로 황반변성 치료 방법을 결정합니다.
 					</p>
-					<div class="feature-wrap system-list">
+					<div class="feature-wrap system-list pc_show">
 						<ul class="feature-list">
 							<li>
 								<div class="feature-circle">
@@ -249,6 +253,41 @@
 								<div class="feature-circle">
 									<img src="/common/img/sub/r_md05_bg03.png" alt="">
 									<p>치료 진행</p>
+								</div>
+								<p class="feature-desc">
+									의료진 상담 시 결정한 방법으로 <br>
+									치료를 진행합니다.
+								</p>
+							</li>
+						</ul>
+					</div>
+					<div class="feature-wrap system-list mo_show">
+						<ul class="feature-list">
+							<li>
+								<div class="feature-circle">
+									<img src="/common/img/sub/mo_pres_clinic_system_bg01.png" alt="">
+								</div>
+								<p class="feature-desc">
+									의료진과 상담 전 검안사와 일대일 <br>
+									정밀 검사로 고객의 눈 상태를 <br>
+									확인합니다.
+								</p>
+							</li>
+							<li>
+								<div class="feature-circle">
+									<img src="/common/img/sub/pres_clinic_system_bg02 (2).png" alt="">
+								</div>
+								<p class="feature-desc">
+									검사 결과를 바탕으로 의료진과 <br>
+									일대일 상담을 진행합니다.
+									<span class="space-sm"></span>
+									이때 의료진은 고객에게 맞는 <br>
+									치료 방법을 결정합니다.
+								</p>
+							</li>
+							<li>
+								<div class="feature-circle">
+									<img src="/common/img/sub/mo_eyecare_dry (2).png" alt="">
 								</div>
 								<p class="feature-desc">
 									의료진 상담 시 결정한 방법으로 <br>
