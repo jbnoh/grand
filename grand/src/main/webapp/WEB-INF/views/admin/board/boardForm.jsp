@@ -61,6 +61,23 @@
 
 											</td>
 										</tr>
+										<c:if test="${_prefix eq 'PU01'}">
+											<tr>
+												<th><span class="table_tit">제목 색상</span></th>
+												<td colspan="2" style="text-align: left">
+													<ul class="radio_wrap radio_st01">
+														<li><label> <input type="radio"
+																name="board_etc1${_prefix}" value="b" checked> <span
+																class="icon_radio">black</span>
+														</label></li>
+														<li><label> <input type="radio"
+																name="board_etc1${_prefix}" value="w"> <span
+																class="icon_radio">white</span>
+														</label></li>
+													</ul>
+												</td>
+											</tr>
+										</c:if>
 										<c:if test="${boardOptionList[0].tcd_attr4 ne 'N'}">
 											<tr>
 												<th><label for="board_url${_prefix}" class="table_tit">URL</label>
@@ -161,16 +178,18 @@
 												style="width: 45%" />
 											</td>
 										</tr>
-										<tr>
-											<th><label for="board_mobile${_prefix}"
-												class="table_tit">연락처</label>
-											</th>
-											<td colspan="2" style="text-align: left;"><input
-												type="text" name="board_mobile${_prefix}"
-												id="board_mobile${_prefix}" class="easyui-validatebox"
-												style="width: 45%" />
-											</td>
-										</tr>
+										<c:if test="${_prefix eq 'BD04' or _prefix eq 'BD05'}">
+											<tr>
+												<th><label for="board_mobile${_prefix}"
+													class="table_tit">연락처</label>
+												</th>
+												<td colspan="2" style="text-align: left;"><input
+													type="text" name="board_mobile${_prefix}"
+													id="board_mobile${_prefix}" class="easyui-validatebox"
+													style="width: 45%" />
+												</td>
+											</tr>
+										</c:if>
 										<%-- 상담 영역 노출  begin --%>
 										<c:if test="${boardOptionList[0].tcd_code eq 'BD11'}">
 											<tr>
@@ -306,6 +325,17 @@
 												</ul>
 											</td>
 										</tr>
+										<c:if test="${_prefix eq 'PU01' or _prefix eq 'BD09'}">
+											<tr>
+												<th><label for="board_url${_prefix}" class="table_tit">링크</label></th>
+												<td colspan="2" style="text-align: left">
+													<input type="text" name="board_url${_prefix}"
+														id="board_url${_prefix}"
+														class="easyui-validatebox" placeholder="URL을 입력해주세요."
+														style="width: 45%" />
+												</td>
+											</tr>
+										</c:if>
 										<th>
 											<label for="board_cnt${_prefix}" class="table_tit">조회수</label>
 											</th>
@@ -653,9 +683,14 @@
 						   								$("#board_cnt${_prefix}").val(data.rows[0].board_cnt);
 						   								$("#board_reg_name${_prefix}").val(data.rows[0].board_reg_name);
 						   								
+						   								if (data.rows[0].board_etc1 == 'b') {
+						   									$("input[name='board_etc1${_prefix}'][value='b']").prop('checked','true');
+						   								} else if (data.rows[0].board_etc1 == 'w') {
+						   									$("input[name='board_etc1${_prefix}'][value='w']").prop('checked','true');
+						   								}
+						   								
 						   								$("#board_etc2${_prefix}").val(data.rows[0].board_etc2);
 						   								$("#board_etc3${_prefix}").val(data.rows[0].board_etc3);
-						   								
 						   								
 						   								if(data.rows[0].board_secret == 'Y'){
 						   									$("input[name='board_secretBD08'][value='Y']").prop('checked','true');
@@ -1521,7 +1556,13 @@
 				param.board_mobile = $("#board_mobile${_prefix}").val();
 				param.board_cnt = $("#board_cnt${_prefix}").val();
 				param.board_url = $("#board_url${_prefix}").val();
-				param.board_etc1 = $("#board_etc1${_prefix}").val();
+				var board_etc1 = $("#board_etc1${_prefix}").val();
+				if ( ${_prefix == 'PU01'} ) {
+					board_etc1 = $("input[type=radio][name=board_etc1${_prefix}]:checked").val();
+				} else if ( ${_prefix == 'BD04' || _prefix == 'BD06'} ) {
+					board_etc1 = $("input[type=radio]:checked").val();
+				}
+				param.board_etc1 = board_etc1;
 				param.board_etc2 = $("#board_etc2${_prefix}").val();
 				param.board_etc3 = $("#board_etc3${_prefix}").val();
 				param.board_etc4 = $("#board_etc4${_prefix}").val();
@@ -1534,11 +1575,7 @@
 				param.board_reg_name = $("#board_reg_name${_prefix}").val();
 				param.board_memory = mHTML;
 				param.board_reg_date = board_reg_date;
-				
-				if( ${_prefix == 'BD04' || _prefix == 'BD06'} ){
-					param.board_etc1 = $("input[type='radio']:checked").val();
-				}
-				
+
 				$.ajax({  
 		               url      		 : '/admin/board/insertBoard'
 		              ,data 			 : param
