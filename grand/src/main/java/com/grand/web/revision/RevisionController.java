@@ -44,4 +44,9 @@ public class RevisionController {
         return "/front/revision/revision_premium";
     }
     
+    @RequestMapping(value = "/revision/myopia", method = RequestMethod.GET)
+    public String myopia() throws Exception {
+
+    	return "/front/revision/revision_myopia";
+    }
 }
