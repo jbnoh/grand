@@ -308,7 +308,7 @@
 								세계적으로 검증된 수술 장비를 사용합니다. <br>
 								개개인에게 맞는 편안한 수준을 위해 끊임없이 배우고 발전합니다.
 							</p>
-							<a href="javascript:void(0)" class="btn_detail">프리미엄 노안&middot;백내장 자세히 보기</a>
+							<a href="/presbyopia/premium" class="btn_detail">프리미엄 노안&middot;백내장 자세히 보기</a>
 							<div class="equip_swiper equip_swiper05 e_swiper0201">
 								<h3 class="sub_title02">맞춤형 백내장 레이저 장비</h3>
 								<div class="swiper-container ">
