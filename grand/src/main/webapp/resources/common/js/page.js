@@ -6,7 +6,7 @@ function clickEvent(count,roundNumber,search_text){
 				
 				if( $(this).text() == " > "){
 					
-					if( (count /roundNumber) < activeNum ){
+					if( (count / roundNumber) <= activeNum ){
 						return false;
 					}
 					
