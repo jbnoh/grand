@@ -60,9 +60,36 @@
 					$(this).toggleClass("active");
 				});
 			}
-			
-			search_board();
-			
+
+			$(".btn_search").on("click",function() {
+
+				var search_text = $("input[type='search']").val().trim();
+				var search_category="";
+
+				$("input[type='checkbox'][name='chk']").each(function() {
+					if ( $(this).is(":checked") == true ) {
+						search_category += $(this).attr("val") + ",";
+					}
+				});
+
+				if( "${menu_code}" == "BD07" ){
+					$(".qna_wrap .sub_tab_menu li").removeClass("active");
+				}
+
+				load_board_list(1, "next", "", search_text, null, search_category);
+			});
+
+			$("input[type='search']").on("keyup", function(key) {
+				if (key.keyCode === 13) {
+					$(".btn_search").trigger("click");
+				}
+			});
+
+			/*
+			$("input[type='checkbox'][name='chk']").on("change", function() {
+				
+			});
+			*/
 		});
 		
 		function qna_click_event(){
@@ -90,38 +117,7 @@
 				
 			});
 		}
-		
-		function search_board(){
-			$(".btn_search").on('click',function(){
-				
-				search_category="";
-				var search_array = [];
-				
-				$("input[type='checkbox'][name='chk']").each(function(a,b){
-					
-					if( $(this).is(":checked") ==true ){
-						search_category += $(this).attr('val')+",";
-					}
-				});
-				
-				
-				if( "${menu_code}" == "BD07" ){
-					$(".qna_wrap .sub_tab_menu li").removeClass("active");
-				}
-				
-				search_text = $("input[type='search']").val();
-				
-				if( search_text ==null || search_text=='' ){
-					alert('검색어를 입력해주세요.');
-					return false;
-				}
-				
-				load_board_list(1,"next","",search_text,null,search_category);
-			});
-		}
-		
-		
-		
+
 		function load_board_list_init(page,init,category,list_form,recall){
 				
 			this.box = "."+"${menu_code}" + "_list";
@@ -188,6 +184,7 @@
 		}
 		
 		function load_board_list(page,pageinit,category,search_text,list_form,search_category){
+			
 			this.box = "."+"${menu_code}" + "_list";
 			this.tmpl = "#"+"${menu_code}" + "_list";
 			

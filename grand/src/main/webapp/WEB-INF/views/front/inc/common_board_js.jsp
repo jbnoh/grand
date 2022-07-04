@@ -957,16 +957,19 @@ var $tempFnc = {
 			
 	};			
 			
-	function __dataload( setting, page ){		
-		param = {};
-		if( setting.list_form == "BD02" || setting.list_form == "BD03"){
-			var roundNumber = 6;
-		}else if(setting.list_form == "BD06"){
-			var roundNumber = 60;
-		}else{
-			var roundNumber = 10;
-		}
+	function __dataload( setting, page ){
 
+		var roundNumber = 10;
+		if( setting.list_form == "BD02" || setting.list_form == "BD03"){
+			roundNumber = 6;
+		}
+		/*
+		else if(setting.list_form == "BD06"){
+			roundNumber = 10;
+		}
+		*/
+
+		var param = {};
 		param.board_idx				= setting.board_idx;
 		param.board_search 			= setting.board_search;
 		param.search_level     		= 0;
@@ -1042,7 +1045,7 @@ var $tempFnc = {
 							if( LastNum % roundNumber != 0 ){
 								pageList +=1;
 							}
-							
+							pageList += (totalPagingCount * 10);
 						}
 						
 						var $tmpleat = $( setting.templeat );
@@ -1087,8 +1090,8 @@ var $tempFnc = {
 							
 							var paging = "";
 							paging += "<li><span> < </span></li>";
-							for( var i=0;i<pageList;i++ ){
-								paging += "<li>"+(i+pageFirstNum)+"</li>";
+							for( var i=pageFirstNum;i<=pageList;i++ ){
+								paging += "<li>"+i+"</li>";
 							}
 							paging += "<li><span> > </span></li>";
 							
