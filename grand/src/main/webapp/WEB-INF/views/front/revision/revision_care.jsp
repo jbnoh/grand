@@ -14,8 +14,9 @@
 			<p class="sub_desc02 pres_care_desc rv-care-desc">검사 전 &middot; 수술 전 &middot; 수술 후 관리가 중요합니다.</p>
 			<div class="notandum_wrap page-wrap"><!-- 수술주의사항 -->
 				<ul class="sub_tab_menu flex wsize">
-					<li class="active" rel="lasikTab">라식</li>
-					<li rel="lasekTab">라섹</li>
+					<li rel="lasikTab" class="active">원데이 라식</li>
+					<li rel="lasekTab">투데이 라섹</li>
+					<li rel="clearSmileLasikTab" style="width:161px;">클리어뷰 스마일 라식</li>
 					<li rel="implantTab">렌즈 삽입술</li>
 					<li rel="dreamTab">드림렌즈</li>
 				</ul>
@@ -351,6 +352,167 @@
 						</div>
 					</div>
 					<!-- //라섹 -->
+					<!-- 클리어뷰 스마일 라식 -->
+					<div id="clearSmileLasikTab" class="tab">
+						<div class="bg_brown_light care_list_wrap">
+							<div class="wsize02">
+								<h3 class="sub_title06"># 수술 전</h3>
+								<ul class="care_list">
+									<li class="flex">
+										<div class="img_box"><img src="/common/img/sub/rv_care_lasik01.png" alt="notandum1"></div>
+										<div class="txt_box">
+											<h4 class="title">렌즈 착용 금지</h4>
+											<div class="desc_default desc-list">
+												<p><span class="date">소프트렌즈</span>ㅣ 7일</p>
+												<p><span class="date">하드렌즈 (RGP)</span>ㅣ 14일</p>
+												<p><span class="date">난시용 소프트렌즈</span>ㅣ 14일</p>
+												<p><span class="date">드림렌즈</span>ㅣ 1개월</p>
+											</div>
+										</div>
+									</li>
+									<li class="flex">
+										<div class="img_box"><img src="/common/img/sub/rv_care_lasik02.png" alt="notandum2"></div>
+										<div class="txt_box">
+											<h4 class="title">검사 당일 자가 운전 금지</h4>
+											<p class="desc_default">
+												망막검사 후 근거리 시력이 불편해지며 눈부심 때문에 자가운전이 불가합니다.
+											</p>
+										</div>
+									</li>
+									<li class="flex">
+										<div class="img_box"><img src="/common/img/sub/rv_care_lasik03.png" alt="notandum3"></div>
+										<div class="txt_box">
+											<h4 class="title">임산부 검사 및 수술 불가능</h4>
+											<p class="desc_default">
+												임신 중에는 호르몬의 변화에 따른 영향으로 검사 및 수술을 권유드리지 않습니다. <br>
+												출산 후 3개월 이후부터 가능하며 모유수유가 끝난 후 검사 및 수술 받으시는 것을 <br>
+												권유드립니다.
+											</p>
+										</div>
+									</li>
+									<li class="flex">
+										<div class="img_box"><img src="/common/img/sub/rv_care_lasik04.png" alt="notandum4"></div>
+										<div class="txt_box">
+											<h4 class="title">안질환 있는 경우 </h4>
+											<p class="desc_default">
+												안질환이 의심되거나 이미 진행된 경우에는 검사 진행이 불가합니다.
+											</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="bg_blue_light care_list_wrap">
+							<div class="wsize02">
+								<h3 class="sub_title06"># 수술 후</h3>
+								<ul class="care_list">
+									<li class="flex">
+										<div class="img_box">
+											<img src="/common/img/sub/rv_care_lasik_after01.png" alt="after_notandum01">
+										</div>
+										<div class="txt_box">
+											<h4 class="title">TV·컴퓨터·핸드폰</h4>
+											<p class="desc_default">
+												수술 후 어지러울 수 있으니 <span class="fc_orange">바로 귀가</span>하시는 것이 좋으며, 2~3시간 정도 시림, 눈물, <br>
+												이물감으로 눈뜨기 불편하실 수 있습니다. 가능한 눈을 감고 쉬시고 TV, 컴퓨터, 스마트폰을 <br>
+												삼가하여 주십시오. 수술 기계 압력으로 실 핏줄이 터져 <span class="fc_orange">충혈 및 피멍</span>이 드는 경우가 있으나, <br>
+												시력과는 무관하며, 특별한 치료없이 1~3주 정도 지나면 <span class="fc_orange">자연 호전</span>됩니다.
+											</p>
+										</div>
+									</li>
+									<li class="flex">
+										<div class="img_box">
+											<img src="/common/img/sub/rv_care_dream_after06.png" alt="">
+										</div>
+										<div class="txt_box">
+											<h4 class="title">취침</h4>
+											<p class="desc_default">
+												<span class="fc_orange">2주 정도는 눈을 세게 감거나, 비비지 않도록 주의</span>하여 주십시오.
+											</p>
+										</div>
+									</li>
+									<li class="flex">
+										<div class="img_box"><img src="/common/img/sub/pres_care_after_img03.png" alt="after_notandum03"></div>
+										<div class="txt_box">
+											<h4 class="title">수술 당일에만 물이 들어가지 않도록 주의</h4>
+											<p class="desc_default days">
+												<span class="date">수술 당일 가능</span>ㅣ 목 아래 샤워  / 뒤로 머리 감기<br>
+												<span class="date">수술 4주 뒤 가능</span>ㅣ 목욕탕 / 찜질방 / 사우나 
+											</p>
+										</div>
+									</li>
+									<li class="flex">
+										<div class="img_box"><img src="/common/img/sub/pres_care_after_img04.png" alt="after_notandum04"></div>
+										<div class="txt_box">
+											<h4 class="title">화장&middot;파마&middot;염색</h4>
+											<p class="desc_default">
+												<span class="date">수술 다음날 </span>ㅣ 피부 화장 <br>
+												<span class="date">수술 1주 뒤 가능 </span>ㅣ 눈 화장 <br>
+												<span class="date">수술 4주 뒤 가능</span>ㅣ 파마 / 염색
+											</p>
+										</div>
+									</li>
+									<li class="flex">
+										<div class="img_box"><img src="/common/img/sub/rv_care_lasik_after05.png" alt="after_notandum05"></div>
+										<div class="txt_box">
+											<h4 class="title">흡연&middot;음주</h4>
+											<p class="desc_default days">
+												<span class="date">수술 7일 뒤 가능</span>ㅣ 흡연 <br>
+												<span class="date">수술 4주 뒤 가능</span>ㅣ 음주 ( 과음은 피해주세요. )
+											</p>
+										</div>
+									</li>
+									<li class="flex">
+										<div class="img_box"><img src="/common/img/sub/rv_care_lasik_after06.png" alt="after_notandum06"></div>
+										<div class="txt_box">
+											<h4 class="title">2주간 과도한 업무</h4>
+											<p class="desc_default">
+												수술 후 2주간은 과도한 독서, 밤샘 작업을 피해 주십시오. <br>
+												과한 업무는 건조증이 유발될 수 있으니 인공눈물을 넣어주십시오.
+											</p>
+										</div>
+									</li>
+									<li class="flex">
+										<div class="img_box"><img src="/common/img/sub/pres_care_after_img07.png" alt="after_notandum07"></div>
+										<div>
+											<h4 class="title">가벼운 운동</h4>
+											<p class="desc_default exercise">
+												<span class="date">수술 1~2주 뒤 가능</span>ㅣ 걷기  / 가벼운 조깅<br>
+												<span class="date">수술 4주 뒤 가능</span>ㅣ 헬스 / 요가 / 수영 등 무리한 운동
+											</p>
+										</div>
+									</li>
+									<li class="flex">
+										<div class="img_box"><img src="/common/img/sub/pres_care_after_img06.png" alt="외부 충격 주의"></div>
+										<div class="txt_box">
+											<h4 class="title">운전</h4>
+											<p class="desc_default">
+												수술 후 회복 초기인  2 ~3주는 장시간 운전 및 초행길 등 야간 운전이 <br>
+												불편할 수 있습니다.
+											</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="care_after_info wsize02">
+							<h3 class="sub_title06"># 안약 사용법</h3>
+							<ul class="list_box03">
+								<li>
+									<span class="fc_orange">수술 당일은 낮잠 주무시지 마세요.</span>
+								</li>
+								<li>
+									모든 안약은 순서 상관없이 1~2분 간격으로 점안해주세요. 주무시는 동안은 점안하지 않으셔도 됩니다.
+								</li>
+								<li>
+									<span class="fc_orange">인공 눈물은 수술 당일 1~20분 간격으로 자주 점안해주세요. 건조하면 주름이 생길 가능성이 높습니다.</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- //클리어뷰 스마일 라식 -->
 					<!-- 렌즈삽입술 -->
 					<div id="implantTab" class="tab">
 						<div class="bg_brown_light care_list_wrap">
