@@ -208,7 +208,7 @@
 					</div>
 					<div class="link-wrap">
 						<a href="/retina/md" class="anchor-arrow">황반변성 클리닉 바로가기</a>
-						<a href="/retina/gc" class="anchor-arrow">녹내장 클리닉 바로가기</a>
+						<a href="/retina/gc" class="anchor-arrow arrow02">녹내장 클리닉 바로가기</a>
 					</div>
 				</div>
 			</div>
