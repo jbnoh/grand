@@ -45,6 +45,7 @@ public class TBoardVO extends CommonVO {
 	private String board_flag;
 	private String search_category;
 	private String board_url;
+	private int board_etc10;
 	private String[] search_category_split;
 	
 	private long rnum;

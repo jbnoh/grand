@@ -55,10 +55,12 @@
 													id="board_title${_prefix}"
 													data-options="missingMessage:'제목은 필수 입력값입니다.',required:true"
 													class="easyui-validatebox" placeholder="제목을 입력해주세요."
-													style="width: 80%" />
-												<input type="checkbox" name="board_notice${_prefix}"
-												id="board_notice${_prefix}" value="Y" /> <label>상위처리</label>
+													style="width:70%; margin-top:10px;" />
 
+												<div>
+													<input type="checkbox" name="board_notice${_prefix}" id="board_notice${_prefix}" value="Y" /> <label>상위처리</label>
+													<span>&nbsp;&nbsp;|&nbsp;&nbsp;노출 순위 설정(상위처리를 체크할 경우, 우선순위가 제일 높음) <input type="text" id="board_etc10${_prefix}" class="easyui-validatebox" style="width:10%; height:30px;" placeholder="숫자입력"></span>
+												</div>
 											</td>
 										</tr>
 										<c:if test="${_prefix eq 'PU01'}">
@@ -1575,6 +1577,7 @@
 				param.board_reg_name = $("#board_reg_name${_prefix}").val();
 				param.board_memory = mHTML;
 				param.board_reg_date = board_reg_date;
+				param.board_etc10 = Number($("#board_etc10${_prefix}").val());
 
 				$.ajax({  
 		               url      		 : '/admin/board/insertBoard'
@@ -1666,6 +1669,18 @@
 		              }
            		});
     		}
+
+			$("#board_notice${_prefix}").change(function() {
+				var $input = $("#board_etc10${_prefix}");
+				var $span = $input.closest("span");
+
+				if ($(this).is(":checked")) {
+					$input.val("");
+					$span.hide();
+				} else {
+					$span.show();
+				}
+			});
 		});
 
 		$.fn.datebox.defaults.formatter = function (date) {
