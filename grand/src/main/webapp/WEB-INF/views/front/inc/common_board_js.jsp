@@ -51,7 +51,7 @@
 <!-- 팝업 스와이퍼  <991px 기준> -->
 <script type="text/x-jquery-tmpl"  id="popup_swiper_list">
 	<div class="swiper-slide popup_slide" data-opt="\${board_etc1}" style="" pcImg="{{html $item.replaceImg()}}" moImg="{{html $item.replaceImg('mo')}}" >
-		<a href="javascript:void(0)">
+		<a href="javascript:movePage('\${board_url}');">
 			<p class="txt01">
 				\${board_title}
 			</p>
@@ -917,8 +917,6 @@ var $tempFnc = {
 					resizePopup();
 				}else{
 					rollingSwiper(swiper_prm,swiper_class);
-// 					<div class="swiper-slide swiper-slide01" data-opt="w">
-// 					<a href="javascript:void(0)">
 				}
 				
 	        }

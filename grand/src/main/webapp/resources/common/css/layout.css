@@ -7,12 +7,12 @@
 .banner_swiper .swiper-container{height:90px;}
 .banner_swiper .swiper-slide{text-align:center; background-position:center; background-repeat:no-repeat;color:#fff;}
 .banner_swiper.bl_type .swiper-slide {color:#052e4d;}
-.banner_swiper .swiper-slide > a{display:inline-block; width:calc(100% - 77px);}
+.banner_swiper .swiper-slide > a{display:inline-block;}
 .banner_swiper .swiper-slide01 {background:url('../img/main/pc_top_ban01.png') center no-repeat; background-size:cover;}
 .banner_swiper .swiper-slide02 {background:url('../img/main/pc_top_ban02.png') center no-repeat; background-size:cover;}
 .banner_swiper .swiper-slide03 {background:url('../img/main/pc_top_ban03.png') center no-repeat; background-size:cover;}
 
-.swiper-btn-wrap{position:absolute; left:50%; top:0; bottom:0; transform:translateX(-50%); z-index:9; width:514px;}
+.swiper-btn-wrap{position:relative; left:50%; top:-45px; bottom:0; transform:translateX(-50%); z-index:9; width:514px;}
 .banner_swiper .swiper-button-next:after, .banner_swiper .swiper-button-prev:after {display:none;}
 .banner_swiper .swiper-button-prev {width:36px; height:36px; left:0; right: auto; top:50%; background:url('../img/main/icon_round_arrow_prev.png') no-repeat 0 0;}
 .banner_swiper.bl_type .swiper-button-next {width:36px; height:36px; right:0; left: auto; top:50%; background:url('../img/main/bl_icon_round_arrow_next.png') no-repeat 0 0;}
