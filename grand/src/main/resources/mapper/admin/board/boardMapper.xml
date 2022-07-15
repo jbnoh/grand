@@ -91,6 +91,9 @@
 				<if test="board_etc9 != null and board_etc9 != ''">
 				,	board_etc9
 				</if>
+				<if test="board_etc10 != null">
+				,	board_etc10
+				</if>
 				<if test="utm_source != null and utm_source != ''">
 				,	utm_source
 				</if>
@@ -178,6 +181,9 @@
 				</if>
 				<if test="board_etc9 != null and board_etc9 != ''">
 				,	#{board_etc9}
+				</if>
+				<if test="board_etc10 != null">
+				,	#{board_etc10}
 				</if>
 				<if test="utm_source != null and utm_source != ''">
 				,	#{utm_source}
@@ -272,6 +278,9 @@
 				</if>
 				<if test="board_etc9 != null and board_etc9 != ''">
 				,	board_etc9= #{board_etc9}
+				</if>
+				<if test="board_etc10 != null">
+				,	board_etc10= #{board_etc10}
 				</if>
 				<if test="board_memory != null and board_memory != ''">
 				,	board_memory= #{board_memory}
@@ -547,6 +556,7 @@
 			,t.board_etc1
 			,t.board_etc2
 			,t.board_etc3
+			,t.board_etc10
 			,t.utm_source
 			,t.utm_medium
 			,t.utm_campaign

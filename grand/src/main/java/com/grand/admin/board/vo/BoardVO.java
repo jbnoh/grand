@@ -75,6 +75,7 @@ public class BoardVO extends CommonVO {
 	private String board_etc9;
 	private String board_etc9_cd;
 	private String board_etc9_nm;
+	private int board_etc10;
 	
 	private String tcd_code;
 	private String tcd_code_M;

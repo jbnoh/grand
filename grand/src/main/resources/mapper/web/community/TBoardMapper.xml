@@ -67,7 +67,8 @@
 	-- com.grand.web.community.dao.TBoardDAOImpl.Mapper.selectCommunity
 
 		SELECT
-			tb.board_idx
+			row_number () over (order by board_etc10 asc,board_reg_date asc,board_idx asc) as rnum
+			,tb.board_idx
 			,tb.board_title
 			,tb.board_menu_code
 			,tb.board_cate_L
@@ -106,7 +107,7 @@
 			on tb.board_cate_M = tcds.tcd_code
 		</if>
 		<include refid="whereBoardList" />
-		order by board_etc10 desc,board_reg_date desc,board_idx desc
+		order by rnum desc
 		<if test="board_menu_code !='BD16'">
 			LIMIT #{startpage} , #{rows}
 		</if>

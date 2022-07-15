@@ -693,6 +693,7 @@
 						   								
 						   								$("#board_etc2${_prefix}").val(data.rows[0].board_etc2);
 						   								$("#board_etc3${_prefix}").val(data.rows[0].board_etc3);
+						   								$("#board_etc10${_prefix}").val(data.rows[0].board_etc10);
 						   								
 						   								if(data.rows[0].board_secret == 'Y'){
 						   									$("input[name='board_secretBD08'][value='Y']").prop('checked','true');
@@ -709,9 +710,7 @@
 						   								};
 						   								
 						   								if( ${_prefix =='BD06'} ){
-						   									if( $("#board_etc1${_prefix}").is(":checked") == false ){
-						   										$("#board_etc1${_prefix}").click();
-						   									}
+					   										$('input:radio[name=board_secretBD06]:input[value=' + data.rows[0].board_etc1 + ']').attr("checked", true);
 						   								}
 						   								
 						   								
@@ -745,7 +744,9 @@
 						   								
 						   								if(data.rows[0].board_notice == "Y")
 					   									{
-						   									$("input:checkbox[id='board_notice${_prefix}']").attr("checked" , true);
+						   									$boardNotice = $("input:checkbox[id='board_notice${_prefix}']");
+						   									$boardNotice.attr("checked" , true);
+						   									$boardNotice.trigger("change");
 					   									}
 						   								
 					   									<c:if test="${boardOptionList[0].tcd_code eq 'BD05'}">
